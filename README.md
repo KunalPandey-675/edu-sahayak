@@ -3,7 +3,7 @@
 > Empowering school children with personalized learning, interactive tools, and collaborative study experiences.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=flat-square&logo=vercel)](https://code4bharat.onrender.com/)
-[![GitHub Repo](https://img.shields.io/badge/Source-GitHub-lightgrey?style=flat-square&logo=github)](https://github.com/Nithin0620/code4bharat)
+[![GitHub Repo](https://img.shields.io/badge/Source-GitHub-lightgrey?style=flat-square&logo=github)](https://github.com/KunalPandey-675/edu-sahayak.git)
 
 ---
 
@@ -83,8 +83,8 @@ EduSahayak is an AI-integrated educational platform designed to **enhance the st
 
 ```bash
 # Clone the repository
-git clone https://github.com/Nithin0620/code4bharat.git
-cd code4bharat
+https://github.com/KunalPandey-675/edu-sahayak.git
+cd edu-sahayak
 
 # Install frontend dependencies
 cd frontend
@@ -99,7 +99,7 @@ npm run dev
 ```
 
 🌐 Live Demo
-<!-- 👉 https://code4bharat.onrender.com/ -->
+<!-- 👉 https://edu-sahayak-tawny.vercel.app/ -->
 
 
 🤝 Contributing
@@ -107,7 +107,7 @@ Contributions are welcome! If you'd like to improve features or fix bugs, feel f
 
 
 📩 Contact
-For any queries or suggestions, feel free to connect with the PORT 200 team behind EduSahayak.
+For any queries or suggestions, feel free to connect.
 
 
 🙏 Thank You
