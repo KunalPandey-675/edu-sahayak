@@ -23,7 +23,6 @@ exports.getFlashcards = async (req, res) => {
       message: "Flashcards Questions Fetched",
       data: videos
     });
-    console.log();
   } catch (error) {
     console.error("AI API call failed:", error.message);
     return res.status(500).json({

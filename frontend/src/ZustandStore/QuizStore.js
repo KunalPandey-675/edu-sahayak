@@ -18,7 +18,7 @@ export const useQuizStore = create((set, get) => ({
   // 🚀 Generate quiz (calls your backend API)
   generateQuiz: async ({ sessionId, class_num, subject, chapter }) => {
     try {
-      console.log("sessionId, class_num, subject, chapter", sessionId, class_num, subject, chapter);
+      // console.log("sessionId, class_num, subject, chapter", sessionId, class_num, subject, chapter);
       set({ loading: true, error: null });
 
       const token = localStorage.getItem("token");
@@ -70,7 +70,7 @@ export const useQuizStore = create((set, get) => ({
 
   submitQuiz: async ({ quizId, answers }) => {
     try {
-      console.log("Submitting quiz:", quizId);
+      // console.log("Submitting quiz:", quizId);
       set({ loading: true, error: null });
       const token = localStorage.getItem("token");
       

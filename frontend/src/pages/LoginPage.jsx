@@ -14,7 +14,7 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && password) {
-      console.log(email,password)
+      // console.log(email,password)
       login({email,password},navigate)
     }
   };

@@ -40,7 +40,7 @@ const useAuthStore = create(
          const { success, data } = response.data;
 
          if (success && data) {
-            console.log("✅ Authenticated user:", data); // Debug
+            // console.log("✅ Authenticated user:", data); // Debug
             set({
             isAuthenticated: true,
             user: data,
@@ -52,7 +52,7 @@ const useAuthStore = create(
       } 
       catch (error) {
          if (error.response?.status === 401) {
-            console.log("🚫 User is not logged in.");
+            // console.log("🚫 User is not logged in.");
          } else {
             console.error("❌ Unexpected error in checkAuth:", error);
          }
@@ -77,9 +77,9 @@ const useAuthStore = create(
    sendOTP: async (email) => {
       set({ loading: true, error: null });
       try {
-         console.log("Sending OTP to:", email);
+         // console.log("Sending OTP to:", email);
          const response = await axios.post(`${BASE_URL}/auth/send-otp`, { email });
-         console.log("OTP Response:", response.data);
+         // console.log("OTP Response:", response.data);
          
          if (response.data?.success) {
             set({ error: null });
@@ -104,7 +104,7 @@ const useAuthStore = create(
       set({ loading: true, error: null });
       try {
          const response = await axios.post(`${BASE_URL}/auth/signup`, finalData);
-         console.log(response)
+         // console.log(response)
          if (response.data?.success) {
          get().loginSuccess(response.data.data);
          navigate('/'); 

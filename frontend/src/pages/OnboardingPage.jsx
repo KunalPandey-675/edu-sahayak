@@ -8,7 +8,7 @@ const OnboardingPage = () => {
    const { sendOTP, formData, loading, updateFormData } = useAuthStore();
    
    // Debug: Log formData on component mount
-   console.log("OnboardingPage - Current formData:", formData);
+   // console.log("OnboardingPage - Current formData:", formData);
    
    const [eqAnswers, setEqAnswers] = useState({
       q1: 0, q2: 0, q3: 0, q4: 0, q5: 0

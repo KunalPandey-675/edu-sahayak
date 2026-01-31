@@ -3,10 +3,10 @@ const { generateQuiz,getAllQuizzes,submitQuiz } =  require("../controllers/QuizC
 const {verifyToken} =require("../middleware/VerifyToken.js");
 
 const router = express.Router();
-console.log("generateQuiz:", generateQuiz);
-console.log("getAllQuizzes:", getAllQuizzes);
-console.log("submitQuiz:", submitQuiz);
-console.log("verifyToken:", verifyToken);
+// console.log("generateQuiz:", generateQuiz);
+// console.log("getAllQuizzes:", getAllQuizzes);
+// console.log("submitQuiz:", submitQuiz);
+// console.log("verifyToken:", verifyToken);
 
 router.post("/generate-quiz", verifyToken, generateQuiz);
 router.get("/getallquiz", verifyToken, getAllQuizzes);

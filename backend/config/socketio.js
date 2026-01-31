@@ -2,7 +2,7 @@ const http = require("http");
 const Server = require("socket.io"); // correct
 require("dotenv").config();
 const SocketIO = require("socket.io");
-console.log(SocketIO);
+// console.log(SocketIO);
 
 const express = require("express");
 const app = express(); // create app only once here
@@ -23,7 +23,7 @@ function getReceiverSocketId(userId) {
 }
 
 io.on("connection", (socket) => {
-  console.log("A user connected:", socket.id);
+  // console.log("A user connected:", socket.id);
 
   const userId = socket.handshake.query.userId;
   if (userId) userSocketMap[userId] = socket.id;
@@ -31,7 +31,7 @@ io.on("connection", (socket) => {
   io.emit("getOnlineUsers", Object.keys(userSocketMap));
 
   socket.on("disconnect", () => {
-    console.log("A user disconnected:", socket.id);
+    // console.log("A user disconnected:", socket.id);
     if (userId) delete userSocketMap[userId];
 
     io.emit("getOnlineUsers", Object.keys(userSocketMap));

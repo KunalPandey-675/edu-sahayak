@@ -47,12 +47,12 @@ const Dashboard = () => {
 
   const handleScore = async () => {
     try {
-      console.log("Fetching quiz scores...");
+      // console.log("Fetching quiz scores...");
       const response = await axios.get(
         `${BASE_URL}/api/score/getuserquizscore`,
         { withCredentials: true } // ⬅️ needed if you use cookies/JWT
       );
-      console.log("Quiz Scores Response:", response.data);
+      // console.log("Quiz Scores Response:", response.data);
       setScore(response.data); // this should be your [4,7,9,...] array
     } catch (e) {
       console.error("Error fetching scores:", e.message);

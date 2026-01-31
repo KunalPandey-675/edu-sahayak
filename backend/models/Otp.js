@@ -26,7 +26,7 @@ const sendVerificationEmail = async(email,otp) =>{
          "Verification Email from EduSahayak",
          verificationMailTamplet(otp)
       );
-      console.log("Mail sent successfully:", mailResponse);
+      console.log("Mail sent successfully");
       return mailResponse;
    }
    catch(error){

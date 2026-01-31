@@ -363,13 +363,13 @@ const handleSendMessage = async (e) => {
       return;
     }
 
-    console.log({
-      sessionId: currentSessionId,
-      user_input: messageToSend,
-      class_num,
-      subject,
-      chapter,
-    });
+    // console.log({
+    //   sessionId: currentSessionId,
+    //   user_input: messageToSend,
+    //   class_num,
+    //   subject,
+    //   chapter,
+    // });
 
     const response = await sendMessage({
       sessionId: currentSessionId,
@@ -378,7 +378,7 @@ const handleSendMessage = async (e) => {
       subject,
       chapter,
     });
-    console.log("response",response)
+    // console.log("response",response)
 
     if (response?.success && response?.reply) {
       const botMessage = {
@@ -421,7 +421,7 @@ const handleSendMessage = async (e) => {
   const handleChatSelect = async (session) => {
     setIsTyping(true);
     try {
-      console.log(session)
+      // console.log(session)
       await fetchMessagesBySessionId(session._id);
       
       // Get the messages from the store

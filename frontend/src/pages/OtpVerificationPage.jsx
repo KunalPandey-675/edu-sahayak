@@ -21,7 +21,7 @@ const OtpVerificationPage = () => {
          ...formData,
          otp,
       };
-      console.log(finalData)
+      // console.log(finalData)
       signup(finalData, navigate);
    };
 

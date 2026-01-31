@@ -22,7 +22,6 @@ exports.chatWithAI = async (req, res) => {
     let messages = [];
     let isNewSession = false;
 
-    console.log('hello')
     const user = await User.findById(userId);
     
     if (!user) {
@@ -32,8 +31,6 @@ exports.chatWithAI = async (req, res) => {
       });
     }
 
-    // ✅ Case 1: Existing Session
-    console.log('hello2')
     if (sessionId) {
       session = await ChatSession.findOne({ _id: sessionId, user: userId });
 
@@ -45,13 +42,11 @@ exports.chatWithAI = async (req, res) => {
       }
 
       cid = session.cid;
-      console.log(session)
-      console.log("in the old one ", cid)
       const previousMessages = await ChatMessage.find({ session: sessionId }).sort({ createdAt: 1 });
       previousMessages.forEach(doc => messages.push(...doc.messages));
 
     } else {
-      // ✅ Case 2: New Session
+
       console.log('Calling upsert-chapter with:', { class_num, subject, chapter });
       const upsertRes = await axios.get(
         'https://InsaneJSK-Code4Bharat-API.hf.space/upsert-chapter',
